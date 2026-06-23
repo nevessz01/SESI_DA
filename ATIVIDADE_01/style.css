@@ -1,0 +1,152 @@
+/* ===== RESET BÁSICO ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* ===== FUNDO GERAL ===== */
+body {
+background: #0f172a;
+color: #e2e8f0;
+line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+header, h1 {
+background: linear-gradient(90deg, #2563eb, #7c3aed);
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+/* ===== LINKS ===== */
+a {
+color: #38bdf8;
+text-decoration: none;
+font-weight: bold;
+}
+
+a:hover {
+color: #facc15;
+}
+
+/* ===== SEÇÕES ===== */
+section, form, main {
+padding: 20px;
+margin: 20px auto;
+max-width: 1000px;
+background: #1e293b;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* ===== TITULOS ===== */
+h2 {
+color: #60a5fa;
+margin-bottom: 10px;
+}
+
+h3 {
+color: #a78bfa;
+}
+
+/* ===== PARÁGRAFOS ===== */
+p {
+margin-bottom: 10px;
+}
+
+/* ===== LISTAS ===== */
+ul, ol {
+margin-left: 20px;
+margin-bottom: 10px;
+}
+
+/* ===== TABELA ===== */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+
+th, td {
+border: 1px solid #334155;
+padding: 10px;
+text-align: center;
+}
+
+th {
+background: #2563eb;
+}
+
+/* ===== IMAGENS ===== */
+img {
+width: 100%;
+max-width: 400px;
+border-radius: 10px;
+margin-top: 10px;
+}
+
+/* ===== FIGURE ===== */
+figure {
+margin-bottom: 20px;
+text-align: center;
+}
+
+/* ===== FORMULÁRIO ===== */
+input, select, textarea {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+margin-bottom: 10px;
+border-radius: 5px;
+border: none;
+}
+
+/* ===== BOTÃO ===== */
+button {
+background: #22c55e;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+button:hover {
+background: #16a34a;
+}
+
+/* ===== HR ===== */
+hr {
+border: 1px solid #334155;
+margin: 20px 0;
+}
+
+/* ===== DETAILS (FAQ) ===== */
+details {
+background: #0f172a;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+nav {
+    background: #0f172a;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #334155;
+}
+
+nav a {
+    margin: 0 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #2563eb;
+    color: white;
+}
