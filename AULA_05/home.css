@@ -1,0 +1,51 @@
+body{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    color: white;
+}
+
+#perfil{
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+
+header p {
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-right: 10px;
+    font-size: bold;
+}
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin: 20px;
+}
+.pesquisa input{
+    width: 700px;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 30px;
+}
+
+.grupo-cards{
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+}
+
+.card {
+    height: 284px;
+    width: 219px;
+    border-radius: 34px;
+    background-size: cover;
+}
