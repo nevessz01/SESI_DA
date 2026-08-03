@@ -1,51 +1,228 @@
-body{
+
+
+
+.parte-cima {
+    flex: 1;
+    background-color: black;
+    height: 120px;
+    margin-top: 0px;
+    padding: 10px;
+    position: relative;
+
+}
+
+.pfp{
+width: 90px;
+height: 90px;
+margin-left: 2%;
+margin-top: 17px;
+border-radius: 100%;
+}
+
+.text {
+     position: absolute;   
+    top: 45%; /* Ajuste a porcentagem para subir ou descer */
+    left: 50%;            
+    transform: translate(-50%, -50%); 
+    color: white;         
+    margin: 0;
+}
+
+.text2 {
+ position: absolute;   
+    top: 45%;
+    left: 95%;            
+    transform: translate(-50%, -50%); 
+    color: white;         
+    margin: 0;
+    font-family: "Ballet", cursive;
+    font-size: 50px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.pesquisar input {
+    width: 400px;
+    height: 70px;
+    border-radius: 40px;
+    text-align: left;
+    border: 2px solid black ;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+
+.botoes {
+display: flex;
+flex-direction: row;
+gap: 20px;
+justify-content: center;
+margin: 50px;
+
+
+
+}
+.botoes-img1 {
+    display: inline-block;
+     width: 170px;
+    height: 250px;
+    background-image: url(gatuh.jpg)  ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: brightness(2);
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px; ;
+    position: relative;
+}
+.botoes-img2 {
+    display: inline-block;
+     width: 170px;
+    height: 250px;
+    background-image: url(imagi.jpg)  ;
+    background-size: 100% 100%;
+    filter: brightness(2);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px; ;
+    position: relative;
+}
+
+.botoes-img3 {
+    display: inline-block;
+     width: 170px;
+    height: 250px;
+    background-image:url(images.jpg)   ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: brightness(2);
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px; ;
+    position: relative;
+}
+
+.botoes-img4 {
+    display: inline-block;
+     width: 170px;
+    height: 250px;
+    background-image:url(peixi.jpg) ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: brightness(2);
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px; ;
+    position: relative;
+}
+
+
+.botoes-img1:hover {
+transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.botoes-img2:hover {
+transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.botoes-img3:hover {
+transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.botoes-img4:hover {
+transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.textos {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
     margin: 0px;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.parte-baixo {
+    flex: 1 ;
     background-color: black;
-    height: 100px;
-    width: 100%;
-    color: white;
-}
-
-#perfil{
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-}
-
-header p {
-    font-size: 25px;
-    text-transform: uppercase;
-    padding-right: 10px;
-    font-size: bold;
-}
-.pesquisa{
+    height: 350px;
     display: flex;
     justify-content: center;
-    height: 100px;
-    margin: 20px;
-}
-.pesquisa input{
-    width: 700px;
-    border-radius: 50px;
-    padding-left: 30px;
-    font-size: 30px;
+    align-items: center;
 }
 
-.grupo-cards{
+.parte-interna {
+    flex: 1;
+    background-color: white;
+    width: 50%;
+    height: 70%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 25px;
     display: flex;
-    justify-content: space-around;
-    background-position: center;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.card {
-    height: 284px;
-    width: 219px;
-    border-radius: 34px;
-    background-size: cover;
+.textoz {
+  flex-direction: column;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gato {
+        width: 40%;
+        height: 80%;
+        background-image: url(aurasigma.jpg) ;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        filter: brightness(2);
+        border-radius: 20px;
+        margin-right: 25px;
+}
+
+.textt {
+margin-right: 65px;
+margin-left: 50px;
+margin-bottom: 20px;
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+.button:hover {
+    transition: 1s;
+    color: rgb(5, 5, 5);
+    background-color: aliceblue;
 }

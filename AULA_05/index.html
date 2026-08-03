@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="styless.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Pug</title>
+    <link rel="stylesheet" href="styless.css">
 </head>
 
 <body>
-    <div class="tela">
-        <div class="le">
-            <h1 class="BV">Bem-Vindo</h1>
-        </div>
+    <div class="lado-esquerdo">
+        <h1 class="fala-pug">Bem-Vindo</h1>
+    </div>
 
-        <div class="ld">
-            <h1 style="color: black;">Encontre tudo o que você precisa para <br>o seu animal de estimação</h1>
-            <div class="grupo-btn">
-                <div class="btn">
-                    <img src="imagens/google.png" alt="Google">
-                    <p style="color: black;">Entrar com Google</p>
-                </div>
-                <div class="btn">
-                    <img src="imagens/apple.png" alt="Apple">
-                    <p style="color: black;">Entrar com Apple</p>
-                </div>
-                <div class="btn">
-                    <img src="imagens/email.png" alt="E-mail">
-                    <p style="color: black;">Entrar com E-mail</p>
-                </div>
-            </div>
+    <div class="lado-direito">
+        <div class="conteudo-centralizado">
+            <h1 class="texto-grande">
+                Encontre tudo o que você precisa para seu animal de estimação
+            </h1>
 
-            <p style="color: black;">Você quer tentar de outra maneira? <a href="">Saber mais</a></p>
+            <button class="botao">
+    <img src="imagens/google.png" class="icone">
+    Entrar com Google
+</button>
 
-            <div class="entrar-btn">
-                <p>Vamos lá</p>
-            </div>
+<button class="botao">
+    <img src="imagens/apple.png" class="icone-apple">
+    Entrar com Apple
+</button>
 
+<button class="botao">
+    <img src="imagens/email.png" class="icone">
+    Entrar com E-mail
+</button>
 
+            <p class="texto-ajuda">
+                Você quer tentar de outra maneira?
+                <a href="#">Saber mais</a>
+            </p>
+
+            <a href="home.html">
+            <button class="botao-destaque">Vamos lá</button>
+            </a>
         </div>
     </div>
 </body>
-
 </html>
