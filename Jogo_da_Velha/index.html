@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo da Velha</title>
+
+  <style>
+    .tabuleiro {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      gap: 5px;
+    }
+
+    button {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Jogo da Velha</h1>
+
+  <p id="vez">Vez do X</p>
+  <p id="mensagem"></p>
+
+  <div class="tabuleiro">
+    <button onclick="jogar(0)"></button>
+    <button onclick="jogar(1)"></button>
+    <button onclick="jogar(2)"></button>
+    <button onclick="jogar(3)"></button>
+    <button onclick="jogar(4)"></button>
+    <button onclick="jogar(5)"></button>
+    <button onclick="jogar(6)"></button>
+    <button onclick="jogar(7)"></button>
+    <button onclick="jogar(8)"></button>
+  </div>
+
+  <br>
+
+  <button onclick="reiniciar()">Reiniciar</button>
+
+  <script>
+    let jogador = "X";
+    let tabuleiro = ["", "", "", "", "", "", "", "", ""];
+    let acabou = false;
+
+    function jogar(posicao) {
+      if (tabuleiro[posicao] != "" || acabou) return;
+
+      tabuleiro[posicao] = jogador;
+
+      document.querySelectorAll(".tabuleiro button")[posicao].innerHTML = jogador;
+
+      if (ganhou()) {
+        document.getElementById("mensagem").innerHTML =
+          "🎉 O jogador " + jogador + " ganhou!";
+        acabou = true;
+        return;
+      }
+
+      jogador = jogador == "X" ? "O" : "X";
+
+      document.getElementById("vez").innerHTML = "Vez do " + jogador;
+    }
+
+    function ganhou() {
+      let combinacoes = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+      ];
+
+      for (let combinacao of combinacoes) {
+        let [a, b, c] = combinacao;
+
+        if (
+          tabuleiro[a] != "" &&
+          tabuleiro[a] == tabuleiro[b] &&
+          tabuleiro[a] == tabuleiro[c]
+        ) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    function reiniciar() {
+      location.reload();
+    }
+  </script>
+
+</body>
+</html>
