@@ -1,11 +1,77 @@
-// const nome = localStorage.getItem("nome");
+function login() {
+    const campo_usuario = document.getElementById("usuario").value;
+    const campo_senha = document.getElementById("senha").value;
 
-//akert (nome);
+    const local_usuario = localStorage.getItem("usuario");
+    const local_senha = localStorage.getItem("senha");
 
-//localStorage.setItem("nome");
+    if (campo_usuario === local_usuario && campo_senha === local_senha) {
+        alert("Login realizado com sucesso! 👍");
+    } else {
+        alert("Usuário ou senha inválidos! 👎");
+    }
+}
 
-//alert(localStorage.getItem("nome");
 
-//localStorage.removeItem("nome");
+function cadastro() {
+    let nome = document.getElementById("nome").value;
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+    let palavraPasse = document.getElementById("palavra-passe").value;
 
-function login
+    if (nome === "" || usuario === "" || senha === "" || palavraPasse === "") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("usuario", usuario);
+    localStorage.setItem("senha", senha);
+    localStorage.setItem("palavra-passe", palavraPasse);
+
+    localStorage.setItem("erros_recuperacao", "0");
+
+    alert("Cadastro realizado com sucesso! 👍");
+
+    window.location.href = "login.html";
+}
+
+
+function recuperar_senha() {
+
+    let nomeDigitado = document.getElementById("nome").value;
+    let senhaDigitada = document.getElementById("senha").value;
+
+    let nomeArmazenado = localStorage.getItem("nome");
+    let senhaArmazenada = localStorage.getItem("senha");
+
+    let erros = Number(localStorage.getItem("erros_recuperacao")) || 0
+    if (erros >= 3) {
+        alert("Você atingiu o limite de tentativas.");
+
+        document.getElementById("nome").disabled = true;
+        document.getElementById("senha").disabled = true;
+
+        return;
+    }
+
+    if (nomeDigitado === nomeArmazenado && senhaDigitada === senhaArmazenada) {
+
+        alert("Senha recuperada: " + senhaArmazenada);
+
+    } else {
+
+        erros++;
+
+        localStorage.setItem("erros_recuperacao", erros);
+
+        alert("Nome ou senha incorretos. Tentativa " + erros + " de 3.");
+
+        if (erros >= 3) {
+            document.getElementById("nome").disabled = true;
+            document.getElementById("senha").disabled = true;
+
+            alert("Você atingiu o limite de tentativas.");
+        }
+    }
+}

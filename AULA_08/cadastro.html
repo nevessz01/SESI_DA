@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <h1>Cadastro</h1>
+
+    <form onsubmit="cadastro(); return false;">
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br><br>
+
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <br><br>
+
+        <label for="palavra-passe">Palavra-passe:</label>
+        <input type="text" id="palavra-passe" name="palavra-passe" required>
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+    <p>
+        Já possui uma conta?
+        <a href="login.html">Fazer login</a>
+    </p>
+
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
